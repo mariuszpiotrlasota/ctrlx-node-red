@@ -8,12 +8,12 @@ base: core22
 type: app
 
 # Limit architectures as ppcel64 doesn't build currently
-architectures:
-#  - build-on: amd64
-#  - build-on: armhf
-  - build-on: arm64
-#  - build-on: s390x
-#  - build-on: ppc64el
+platforms:
+  amd64:
+  arm64:
+    build-on: [amd64, arm64]
+    build-for: [arm64]
+
 
 apps:
   node-red:
